@@ -1,0 +1,14 @@
+{
+	"required": true,
+	"package": "me.sshcrack.dyeable_sulfur_blocks.mixin",
+	"compatibilityLevel": "JAVA_25",
+	"mixins": [
+		"ExampleMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	},
+	"overwrites": {
+		"requireAnnotations": true
+	}
+}
