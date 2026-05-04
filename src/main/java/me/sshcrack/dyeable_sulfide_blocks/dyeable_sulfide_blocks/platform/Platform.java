@@ -1,4 +1,4 @@
-package com.example.modtemplate.platform;
+package me.sshcrack.dyeable_sulfur_blocks.dyeable_sulfur_blocks.platform;
 
 public interface Platform {
 	boolean isModLoaded(String modId);
@@ -14,6 +14,6 @@ public interface Platform {
 	}
 
 	enum ModLoader {
-		FABRIC, NEOFORGE, FORGE, QUILT
+		FABRIC, NEOFORGE, QUILT
 	}
 }

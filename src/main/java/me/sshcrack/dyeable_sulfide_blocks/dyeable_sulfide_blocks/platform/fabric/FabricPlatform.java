@@ -1,8 +1,8 @@
-package com.example.modtemplate.platform.fabric;
+package me.sshcrack.dyeable_sulfur_blocks.dyeable_sulfur_blocks.platform.fabric;
 
 //? fabric {
 
-import com.example.modtemplate.platform.Platform;
+import me.sshcrack.dyeable_sulfur_blocks.dyeable_sulfur_blocks.platform.Platform;
 import net.fabricmc.loader.api.FabricLoader;
 
 public class FabricPlatform implements Platform {

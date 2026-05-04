@@ -1,8 +1,8 @@
-package com.example.modtemplate.platform.fabric;
+package me.sshcrack.dyeable_sulfur_blocks.dyeable_sulfur_blocks.platform.fabric;
 
 //? fabric {
 
-import com.example.modtemplate.ModTemplate;
+import me.sshcrack.dyeable_sulfur_blocks.dyeable_sulfur_blocks.DyedSulfurBlocksMod;
 import dev.kikugie.fletching_table.annotation.fabric.Entrypoint;
 import net.fabricmc.api.ClientModInitializer;
 
@@ -11,7 +11,7 @@ public class FabricClientEntrypoint implements ClientModInitializer {
 
 	@Override
 	public void onInitializeClient() {
-		ModTemplate.onInitializeClient();
+		DyedSulfurBlocksMod.onInitializeClient();
 	}
 
 }

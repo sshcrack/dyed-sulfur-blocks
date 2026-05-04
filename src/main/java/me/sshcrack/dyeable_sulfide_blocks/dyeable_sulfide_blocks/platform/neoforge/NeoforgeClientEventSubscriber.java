@@ -1,8 +1,8 @@
-package com.example.modtemplate.platform.neoforge;
+package me.sshcrack.dyeable_sulfur_blocks.dyeable_sulfur_blocks.platform.neoforge;
 
 //? neoforge {
 
-/*import com.example.modtemplate.ModTemplate;
+/*import me.sshcrack.dyeable_sulfur_blocks.dyeable_sulfur_blocks.ModTemplate;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
