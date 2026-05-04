@@ -1,8 +1,8 @@
-package me.sshcrack.dyeable_sulfur_blocks.dyeable_sulfur_blocks.platform.neoforge;
+package me.sshcrack.dyeable_sulfur_blocks.platform.neoforge;
 
 //? neoforge {
 
-/*import me.sshcrack.dyeable_sulfur_blocks.dyeable_sulfur_blocks.event.ExampleEventHandler; // sample_content
+/*import me.sshcrack.dyeable_sulfur_blocks.event.ExampleEventHandler; // sample_content
 import net.minecraft.server.level.ServerPlayer; // sample_content
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;

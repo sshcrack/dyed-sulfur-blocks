@@ -1,4 +1,4 @@
-package me.sshcrack.dyeable_sulfur_blocks.dyeable_sulfur_blocks.platform;
+package me.sshcrack.dyeable_sulfur_blocks.platform;
 
 public interface Platform {
 	boolean isModLoaded(String modId);

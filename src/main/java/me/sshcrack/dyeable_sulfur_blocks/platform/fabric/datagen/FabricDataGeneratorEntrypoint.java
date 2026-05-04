@@ -1,4 +1,4 @@
-package me.sshcrack.dyeable_sulfur_blocks.dyeable_sulfur_blocks.platform.fabric.datagen;
+package me.sshcrack.dyeable_sulfur_blocks.platform.fabric.datagen;
 
 //? fabric {
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;

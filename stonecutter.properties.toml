@@ -17,7 +17,7 @@ mod.discord_url = ""
 [[mod.pom.developers]]
 id = "sshcrack"
 name = "sshcrack"
-url = "https://github.com/ghost"
+url = "https://github.com/sshcrack"
 
 [fabric]
 deps.fabric-loader = "0.19.2"

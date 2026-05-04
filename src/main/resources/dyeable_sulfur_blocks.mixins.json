@@ -1,5 +1,5 @@
 {
-  "package": "me.sshcrack.dyeable_sulfur_blocks.dyeable_sulfur_blocks.mixin",
+  "package": "me.sshcrack.dyeable_sulfur_blocks.mixin",
   "required": true,
   "minVersion": "0.8",
   "compatibilityLevel": "${java}",

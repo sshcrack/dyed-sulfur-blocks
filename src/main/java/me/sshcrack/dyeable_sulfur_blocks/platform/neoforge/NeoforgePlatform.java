@@ -1,8 +1,8 @@
-package me.sshcrack.dyeable_sulfur_blocks.dyeable_sulfur_blocks.platform.neoforge;
+package me.sshcrack.dyeable_sulfur_blocks.platform.neoforge;
 
 //? neoforge {
 
-/*import me.sshcrack.dyeable_sulfur_blocks.dyeable_sulfur_blocks.platform.Platform;
+/*import me.sshcrack.dyeable_sulfur_blocks.platform.Platform;
 import net.neoforged.fml.ModList;
 import net.neoforged.fml.loading.FMLLoader;
 import net.neoforged.fml.loading.VersionInfo;

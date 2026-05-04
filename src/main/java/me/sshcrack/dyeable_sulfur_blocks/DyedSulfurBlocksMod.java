@@ -1,15 +1,16 @@
-package me.sshcrack.dyeable_sulfur_blocks.dyeable_sulfur_blocks;
+package me.sshcrack.dyeable_sulfur_blocks;
 
-import me.sshcrack.dyeable_sulfur_blocks.dyeable_sulfur_blocks.platform.Platform;
+import me.sshcrack.dyeable_sulfur_blocks.platform.Platform;
 
+import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 //? fabric {
-import me.sshcrack.dyeable_sulfur_blocks.dyeable_sulfur_blocks.platform.fabric.FabricPlatform;
+import me.sshcrack.dyeable_sulfur_blocks.platform.fabric.FabricPlatform;
 //?} neoforge {
-/*import me.sshcrack.dyeable_sulfur_blocks.dyeable_sulfur_blocks.platform.neoforge.NeoforgePlatform;
+/*import me.sshcrack.dyeable_sulfur_blocks.platform.neoforge.NeoforgePlatform;
  *///?}
 
 @SuppressWarnings("LoggingSimilarMessage")

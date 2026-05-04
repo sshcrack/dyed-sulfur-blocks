@@ -1,6 +1,6 @@
-package me.sshcrack.dyeable_sulfur_blocks.dyeable_sulfur_blocks.event;
+package me.sshcrack.dyeable_sulfur_blocks.event;
 
-import me.sshcrack.dyeable_sulfur_blocks.dyeable_sulfur_blocks.DyedSulfurBlocksMod;
+import me.sshcrack.dyeable_sulfur_blocks.DyedSulfurBlocksMod;
 import net.minecraft.server.level.ServerPlayer;
 
 import java.util.Objects;

@@ -1,8 +1,8 @@
-package me.sshcrack.dyeable_sulfur_blocks.dyeable_sulfur_blocks.platform.fabric.datagen;
+package me.sshcrack.dyeable_sulfur_blocks.platform.fabric.datagen;
 
 //? fabric && != 1.19.2 {
 
-import me.sshcrack.dyeable_sulfur_blocks.dyeable_sulfur_blocks.DyedSulfurBlocksMod;
+import me.sshcrack.dyeable_sulfur_blocks.DyedSulfurBlocksMod;
 
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.core.HolderLookup;
