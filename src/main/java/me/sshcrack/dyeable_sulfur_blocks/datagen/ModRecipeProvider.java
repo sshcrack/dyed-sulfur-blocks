@@ -31,7 +31,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
     protected RecipeProvider createRecipeProvider(HolderLookup.Provider registries, RecipeOutput output) {
         return new RecipeProvider(registries, output) {
             @Override
-            protected void buildRecipes() {
+            public void buildRecipes() {
                 for (Map.Entry<DyeColor, Block> entry : ModBlocks.DYED_POTENT_SULFUR.entrySet()) {
                     DyeColor color = entry.getKey();
                     Block result = entry.getValue();
@@ -42,7 +42,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                                     color.getName() + "_potent_sulfur"
                             )
                     );
-                    ShapelessRecipeBuilder.shapeless(registries.lookup(Registries.ITEM), RecipeCategory.BUILDING_BLOCKS, result)
+                    ShapelessRecipeBuilder.shapeless(registries.lookup(Registries.ITEM).get(), RecipeCategory.BUILDING_BLOCKS, result)
                             .requires(Blocks.POTENT_SULFUR)
                             .requires(Items.DYE.pick(color))
                             .unlockedBy(getHasName(Blocks.POTENT_SULFUR), has(Blocks.POTENT_SULFUR))

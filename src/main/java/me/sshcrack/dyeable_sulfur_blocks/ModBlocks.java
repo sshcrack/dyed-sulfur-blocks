@@ -20,11 +20,12 @@ public class ModBlocks {
 
     public static void init() {
         for (DyeColor color : DyeColor.values()) {
+            var id = Identifier.fromNamespaceAndPath(DyeableSulfurBlocks.MOD_ID, color.getName() + "_potent_sulfur");
             Block block = Registry.register(
                     BuiltInRegistries.BLOCK,
-                    Identifier.fromNamespaceAndPath(DyeableSulfurBlocks.MOD_ID, color.getName() + "_potent_sulfur"),
+                    id,
                     new DyeablePotentSulfurBlock(color,
-                            BlockBehaviour.Properties.ofFullCopy(Blocks.POTENT_SULFUR))
+                            BlockBehaviour.Properties.ofFullCopy(Blocks.POTENT_SULFUR).setId(id))
             );
             DYED_POTENT_SULFUR.put(color, block);
         }

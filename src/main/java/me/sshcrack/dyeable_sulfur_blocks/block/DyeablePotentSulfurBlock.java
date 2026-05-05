@@ -5,12 +5,13 @@ import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.block.PotentSulfurBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import org.jspecify.annotations.NonNull;
 
 public class DyeablePotentSulfurBlock extends PotentSulfurBlock {
 
-    public static final MapCodec<DyeablePotentSulfurBlock> CODEC = RecordCodecBuilder.mapCodec(
+    public static final MapCodec<PotentSulfurBlock> CODEC = RecordCodecBuilder.mapCodec(
             instance -> instance.group(
-                    DyeColor.CODEC.fieldOf("color").forGetter(DyeablePotentSulfurBlock::getDyeColor),
+                    DyeColor.CODEC.fieldOf("color").forGetter(e -> ((DyeablePotentSulfurBlock) e).getDyeColor()),
                     propertiesCodec()
             ).apply(instance, DyeablePotentSulfurBlock::new)
     );
@@ -27,7 +28,7 @@ public class DyeablePotentSulfurBlock extends PotentSulfurBlock {
     }
 
     @Override
-    public MapCodec<DyeablePotentSulfurBlock> codec() {
+    public @NonNull MapCodec<PotentSulfurBlock> codec() {
         return CODEC;
     }
 }
