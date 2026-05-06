@@ -22,7 +22,10 @@ public class ModLanguageProvider extends FabricLanguageProvider {
             DyeColor color = entry.getKey();
             Block block = entry.getValue();
             String colorName = capitalize(color.getName().replace('_', ' '));
-            builder.add(block, colorName + " Potent Sulfur");
+
+            var name = colorName + " Potent Sulfur";
+            builder.add(block, name);
+            builder.add(block.asItem(), name);
         }
     }
 
