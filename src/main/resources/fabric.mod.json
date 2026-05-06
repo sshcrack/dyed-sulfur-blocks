@@ -18,6 +18,9 @@
 		"main": [
 			"me.sshcrack.dyeable_sulfur_blocks.DyeableSulfurBlocks"
 		],
+		"client": [
+			"me.sshcrack.dyeable_sulfur_blocks.client.DyeableSulfurBlocksClient"
+		],
 		"fabric-datagen": [
 			"me.sshcrack.dyeable_sulfur_blocks.DyeableSulfurBlocksDataGenerator"
 		]

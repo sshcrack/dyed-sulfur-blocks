@@ -1,0 +1,12 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "dyeable_sulfur_blocks:block/dyed_potent_sulfur",
+    "tints": [
+      {
+        "type": "minecraft:constant",
+        "value": -6447721
+      }
+    ]
+  }
+}
