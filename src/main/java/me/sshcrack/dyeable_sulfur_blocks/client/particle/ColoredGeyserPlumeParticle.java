@@ -66,10 +66,10 @@ public class ColoredGeyserPlumeParticle extends SingleQuadParticle {
         this.setSpriteFromAge(sprites);
 
         // Apply dye colour (same technique as DustParticle)
-        /*Vector3f rgb = ARGB.vector3fFromRGB24(options.color());
+        Vector3f rgb = ARGB.vector3fFromRGB24(options.color());
         this.rCol = rgb.x();
         this.gCol = rgb.y();
-        this.bCol = rgb.z();*/
+        this.bCol = rgb.z();
     }
 
     @Override

@@ -62,8 +62,8 @@ public class ModModelProvider extends FabricModelProvider {
         json.addProperty("parent", "minecraft:block/block");
 
         JsonObject textures = new JsonObject();
-        textures.addProperty("all", "minecraft:block/potent_sulfur");
-        textures.addProperty("particle", "minecraft:block/potent_sulfur");
+        textures.addProperty("all", "dyeable_sulfur_blocks:block/potent_sulfur");
+        textures.addProperty("particle", "dyeable_sulfur_blocks:block/potent_sulfur");
         json.add("textures", textures);
 
         JsonObject element = new JsonObject();

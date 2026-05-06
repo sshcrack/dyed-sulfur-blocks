@@ -2,9 +2,7 @@ package me.sshcrack.dyeable_sulfur_blocks.client;
 
 import me.sshcrack.dyeable_sulfur_blocks.ModBlocks;
 import me.sshcrack.dyeable_sulfur_blocks.block.DyeablePotentSulfurBlock;
-import me.sshcrack.dyeable_sulfur_blocks.client.particle.ColoredGeyserPlumeParticle;
-import me.sshcrack.dyeable_sulfur_blocks.client.particle.ColoredNoxiousGasCloudParticle;
-import me.sshcrack.dyeable_sulfur_blocks.client.particle.ColoredNoxiousGasParticle;
+import me.sshcrack.dyeable_sulfur_blocks.client.particle.*;
 import me.sshcrack.dyeable_sulfur_blocks.particle.ModParticleTypes;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.particle.v1.ParticleProviderRegistry;
@@ -43,9 +41,20 @@ public class DyeableSulfurBlocksClient implements ClientModInitializer {
                 ModParticleTypes.COLORED_NOXIOUS_GAS,
                 ColoredNoxiousGasParticle.Provider::new);
 
-        // Geyser plume particles (need the geyser sprite sheet)
         ParticleProviderRegistry.getInstance().register(
                 ModParticleTypes.COLORED_GEYSER,
+                ColoredGeyserEruptionParticle.Provider::new);
+
+        ParticleProviderRegistry.getInstance().register(
+                ModParticleTypes.COLORED_GEYSER_BASE,
+                ColoredGeyserBaseParticle.Provider::new);
+
+        ParticleProviderRegistry.getInstance().register(
+                ModParticleTypes.COLORED_GEYSER_POOF,
+                ColoredGeyserBaseParticle.Provider::new);
+
+        ParticleProviderRegistry.getInstance().register(
+                ModParticleTypes.COLORED_GEYSER_PLUME,
                 ColoredGeyserPlumeParticle.Provider::new);
     }
 }

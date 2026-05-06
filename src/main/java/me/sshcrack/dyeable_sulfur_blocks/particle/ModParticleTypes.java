@@ -43,6 +43,21 @@ public class ModParticleTypes {
                     ColoredGeyserParticleOptions::codec,
                     ColoredGeyserParticleOptions::streamCodec);
 
+    public static final ParticleType<ColoredGeyserBaseParticleOptions> COLORED_GEYSER_BASE =
+            register("colored_geyser_base",
+                    ColoredGeyserBaseParticleOptions::codec,
+                    ColoredGeyserBaseParticleOptions::streamCodec);
+
+    public static final ParticleType<ColoredGeyserBaseParticleOptions> COLORED_GEYSER_POOF =
+            register("colored_geyser_poof",
+                    ColoredGeyserBaseParticleOptions::codec,
+                    ColoredGeyserBaseParticleOptions::streamCodec);
+
+    public static final ParticleType<ColoredGeyserParticleOptions> COLORED_GEYSER_PLUME =
+            register("colored_geyser_plume",
+                    ColoredGeyserParticleOptions::codec,
+                    ColoredGeyserParticleOptions::streamCodec);
+
     private static <T extends ParticleOptions> ParticleType<T> register(
             String name,
             MapCodec<T> codec,
