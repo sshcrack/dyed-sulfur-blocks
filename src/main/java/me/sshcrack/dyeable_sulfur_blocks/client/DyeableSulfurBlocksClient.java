@@ -7,7 +7,6 @@ import net.fabricmc.fabric.api.client.rendering.v1.BlockColorRegistry;
 import net.minecraft.world.level.block.Block;
 
 import java.util.List;
-import java.util.Map;
 
 public class DyeableSulfurBlocksClient implements ClientModInitializer {
 

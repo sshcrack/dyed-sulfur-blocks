@@ -23,10 +23,12 @@ public class ModItems {
         for (Map.Entry<DyeColor, Block> entry : ModBlocks.DYED_POTENT_SULFUR.entrySet()) {
             DyeColor color = entry.getKey();
             Block block = entry.getValue();
+            Identifier id = Identifier.fromNamespaceAndPath(DyeableSulfurBlocks.MOD_ID, color.getName() + "_potent_sulfur");
+            ResourceKey<Item> key = ResourceKey.create(Registries.ITEM, id);
             Item item = Registry.register(
                     BuiltInRegistries.ITEM,
-                    Identifier.fromNamespaceAndPath(DyeableSulfurBlocks.MOD_ID, color.getName() + "_potent_sulfur"),
-                    new BlockItem(block, new Item.Properties())
+                    id,
+                    new BlockItem(block, new Item.Properties().setId(key))
             );
             DYED_POTENT_SULFUR_ITEMS.put(color, item);
         }

@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "minecraft:potent_sulfur",
+    "minecraft:gray_dye"
+  ],
+  "result": {
+    "id": "dyeable_sulfur_blocks:gray_potent_sulfur"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "minecraft:potent_sulfur",
+    "minecraft:pink_dye"
+  ],
+  "result": {
+    "id": "dyeable_sulfur_blocks:pink_potent_sulfur"
+  }
+}
