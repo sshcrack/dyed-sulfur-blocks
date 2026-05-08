@@ -7,14 +7,14 @@ import me.sshcrack.dyeable_sulfur_blocks.particle.ColoredNoxiousGasCloudOptions;
 import me.sshcrack.dyeable_sulfur_blocks.particle.ModParticleTypes;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.core.particles.GeyserParticleOptions;
-import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.PotentSulfurBlock;
 import net.minecraft.world.level.block.entity.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.properties.PotentSulfurState;
+import net.minecraft.world.level.block.state.properties.Property;
 import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.phys.Vec3;
 import org.jspecify.annotations.NonNull;
@@ -55,21 +55,22 @@ public class DyeablePotentSulfurBlock extends PotentSulfurBlock {
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(
             Level level, @NonNull BlockState blockState, @NonNull BlockEntityType<T> type) {
 
-        if (!level.isClientSide()) {
-            // Server tickers are identical to vanilla – delegate up
-            return super.getTicker(level, blockState, type);
-        }
-
-        // Client: return colored particle tickers instead of vanilla white ones
         int color = dyeColor.getTextureDiffuseColor();
-        BlockEntityTicker<PotentSulfurBlockEntity> clientTicker =
+        var client = level.isClientSide();
+        return createTickerHelper(
+                type,
+                BlockEntityTypes.POTENT_SULFUR,
                 switch (blockState.getValue(STATE)) {
                     case DRY -> null;
-                    case WET, DORMANT -> createColoredNoxiousGasTicker(color);
-                    case ERUPTING -> createColoredGeyserTicker(color);
-                };
-
-        return createTickerHelper(type, BlockEntityTypes.POTENT_SULFUR, clientTicker);
+                    case WET -> client ? createColoredNoxiousGasTicker(color) : null;
+                    case DORMANT -> client
+                            ? createColoredNoxiousGasTicker(color)
+                            : PotentSulfurBlockEntity.SERVER_WAITING_COUNTDOWN_TICKER;
+                    case ERUPTING -> client
+                            ? createColoredGeyserTicker(color)
+                            : PotentSulfurBlockEntity.SERVER_LAUNCH_ENTITY_TICKER.andThen(PotentSulfurBlockEntity.SERVER_WAITING_COUNTDOWN_TICKER);
+                }
+        );
     }
 
     // -----------------------------------------------------------------------

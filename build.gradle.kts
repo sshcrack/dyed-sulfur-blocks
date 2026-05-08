@@ -1,5 +1,8 @@
+import io.github.themrmilchmann.gradle.publish.curseforge.GameVersion
+
 plugins {
 	id("net.fabricmc.fabric-loom")
+	id("io.github.themrmilchmann.curseforge-publish") version "0.8.0"
 	`maven-publish`
 }
 
@@ -23,12 +26,12 @@ fabricApi {
 dependencies {
 	// To change the versions see the gradle.properties file
 	minecraft("com.mojang:minecraft:${providers.gradleProperty("minecraft_version").get()}")
-	
+
 	implementation("net.fabricmc:fabric-loader:${providers.gradleProperty("loader_version").get()}")
 
 	// Fabric API. This is technically optional, but you probably want it anyway.
 	implementation("net.fabricmc.fabric-api:fabric-api:${providers.gradleProperty("fabric_api_version").get()}")
-	
+
 }
 
 tasks.processResources {
@@ -79,3 +82,21 @@ publishing {
 		// retrieving dependencies.
 	}
 }
+/*
+curseforge {
+	publications {
+		register("curseForge") {
+			projectId = "1535461"
+
+			gameVersions.add(GameVersion("minecraft-1-16", "1.16.5"))
+
+			artifacts.register("main") {
+				displayName = "${project.name} ${project.version}"
+				releaseType = ReleaseType.BETA
+
+				from(tasks.named("jar"))
+			}
+		}
+	}
+}
+*/
